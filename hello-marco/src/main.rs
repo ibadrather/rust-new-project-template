@@ -2,7 +2,12 @@
 use clap::Parser;
 
 #[derive(Parser)]
-#[clap(name = "Marco Polo", version = "1.0", author = "Ibad Rather", about = "A Marco Polo Game")]
+#[clap(
+    name = "Marco Polo",
+    version = "1.0",
+    author = "Ibad Rather",
+    about = "A Marco Polo Game"
+)]
 struct Cli {
     #[clap(subcommand)]
     command: Option<Commands>,
@@ -29,3 +34,11 @@ fn main() {
         }
     }
 }
+
+
+// make run
+
+// cargo run -- play --name "Marco" 
+// cargo run -- play --name "Ibad"
+
+// ./target/debug/hello-marco --help
